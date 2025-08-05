@@ -1783,6 +1783,11 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
+		background-image: url('../images/rocket-huntsville.jpg');
+  		background-size: cover;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		padding: 6em 0 4em 0;
 		text-align: center;
 		width: 940px;
 		margin: 0 auto;
