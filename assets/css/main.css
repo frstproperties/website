@@ -2035,9 +2035,6 @@ input, select, textarea {
 
 .quote-list li img {
   float: none;         /* remove float */
-  display: block;      /* stack above text */
-  margin: 0 auto 10px; /* center image and add space below */
-  width: 80px;         /* optional: make star smaller */
   height: auto;
 }
 
