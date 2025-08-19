@@ -221,25 +221,35 @@
       <li><a href="Forms/Lead Paint Pamphlet.pdf" target="_blank" rel="noopener">Lead Paint Pamphlet</a></li>
     </ul>
   </nav>
-	   <!-- Contact Us Form -->
+
+<!-- Contact Us -->
 <nav class="nav-card" aria-labelledby="contact-us-title">
   <h2 class="nav-title" id="contact-us-title">Contact Us</h2>
-  <form action="frstpropertiesllc@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+  <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+    <input type="hidden" name="_subject" value="FRST Properties Website Contact">
+    <input type="hidden" name="_template" value="table">
 
-	<label for="phone">Phone Number:</label><br>
-    <input type="phone" id="phone" name="phone" required><br><br>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required />
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    <label for="email">Email</label>
+    <input id="email" name="_replyto" type="email" required />
+
+    <label for="phone">Phone Number</label>
+    <input id="phone" name="phone" type="tel" pattern="[0-9\-+\s()]*" placeholder="(555) 123-4567" />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <!-- Honeypot (spam trap) -->
+    <input class="hp" type="text" name="company" autocomplete="off" tabindex="-1" aria-hidden="true" />
 
     <button type="submit">Send</button>
+    <div id="contact-status" aria-live="polite" style="margin-top:8px;"></div>
   </form>
 </nav>
+
 
 </div>
 
@@ -270,6 +280,7 @@
 	</body>
 
 </html>
+
 
 
 
