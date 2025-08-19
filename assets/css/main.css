@@ -1410,10 +1410,6 @@ input, select, textarea {
 			border-bottom: 0 !important;
 		}
 
-		.quote-list li img {
-			float: left;
-		}
-
 		.quote-list li p {
 			margin: 0 0 0 90px;
 			font-size: 1.2em;
@@ -2028,19 +2024,4 @@ input, select, textarea {
 			#copyright {
 				padding: 20px 30px;
 			}
-/* Center stars and testimonial text */
-.quote-list li {
-  text-align: center;
-}
-
-.quote-list li img {
-  float: none;         /* remove float */
-  height: auto;
-}
-
-.quote-list li p,
-.quote-list li span {
-  margin: 0;           /* remove left indent */
-}
-
 	}
