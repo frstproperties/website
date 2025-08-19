@@ -2117,24 +2117,6 @@ input, select, textarea {
     max-width: 100%;
   }
 }
-/* Force three cards in one row; stack on mobile */
-.nav-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-/* Kill any earlier min-width that forces wrapping */
-.nav-row .nav-card {
-  min-width: 0 !important;
-}
-
-/* Stack on smaller screens */
-@media (max-width: 736px) {
-  .nav-row {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 
