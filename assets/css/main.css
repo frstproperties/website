@@ -2028,5 +2028,22 @@ input, select, textarea {
 			#copyright {
 				padding: 20px 30px;
 			}
+/* Center stars and testimonial text */
+.quote-list li {
+  text-align: center;
+}
+
+.quote-list li img {
+  float: none;         /* remove float */
+  display: block;      /* stack above text */
+  margin: 0 auto 10px; /* center image and add space below */
+  width: 80px;         /* optional: make star smaller */
+  height: auto;
+}
+
+.quote-list li p,
+.quote-list li span {
+  margin: 0;           /* remove left indent */
+}
 
 	}
