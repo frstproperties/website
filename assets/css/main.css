@@ -1904,16 +1904,18 @@ input, select, textarea {
 				box-shadow: inset -1px 0px 0px 0px rgba(255, 255, 255, 0.25), inset -2px 0px 25px 0px rgba(0, 0, 0, 0.5);
 				text-shadow: -1px -1px 1px black;
 			}
-		.nav-row {
+.nav-row {
   display: flex;
-  gap: 20px;          /* space between the two nav cards */
-  flex-wrap: wrap;    /* allows them to stack on small screens */
+  gap: 20px;
+  flex-wrap: wrap; /* keep stacking on mobile */
+  justify-content: space-between; /* spread cards evenly */
 }
 
 .nav-card {
-  flex: 1;            /* both take equal width side by side */
-  min-width: 280px;   /* don’t shrink too small */
+  flex: 1 1 30%;   /* each card takes ~1/3 of the row on wide screens */
+  min-width: 250px;
 }
+
 
 				#navPanel .link {
 					display: block;
