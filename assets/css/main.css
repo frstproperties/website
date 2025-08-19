@@ -2091,5 +2091,18 @@ input, select, textarea {
     grid-row: auto;
   }
 }
+/* Make Contact Us card wider */
+.nav-row .contact-card {
+  flex: 1 1 500px;   /* allow it to grow wider (adjust px as needed) */
+  max-width: 600px;  /* cap so it doesn’t stretch too far */
+}
+
+/* Make inputs & textarea stretch full width inside the card */
+.contact-card form input,
+.contact-card form textarea,
+.contact-card form button {
+  width: 100%;
+  box-sizing: border-box; /* ensures padding doesn't break width */
+}
 
 
