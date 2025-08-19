@@ -2025,3 +2025,34 @@ input, select, textarea {
 				padding: 20px 30px;
 			}
 	}
+/* Contact Us form styles */
+.nav-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-card input,
+.nav-card textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nav-card button {
+  background-color: #ed391b;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-card button:hover {
+  background-color: #ce1a00;
+}
+
