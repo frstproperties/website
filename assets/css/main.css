@@ -2075,7 +2075,7 @@ input, select, textarea {
 /* Ensure the Contact Us form behaves like the other cards */
 .contact-card {
   width: 100%;                      /* Ensure it takes full width available */
-  max-width: 600px;                 /* Limit to max width of 600px */
+  max-width: 900px;                 /* Limit to max width of 600px */
   margin: 0 auto;                   /* Center horizontally */
   padding: 20px;                    /* Add padding for visual spacing */
   box-sizing: border-box;           /* Include padding in width calculation */
