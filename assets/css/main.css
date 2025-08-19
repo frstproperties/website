@@ -2133,8 +2133,8 @@ input, select, textarea {
 }
 
 .nav-row .nav-card {
-  flex: 1 1 calc(33.333% - 20px); /* each takes 1/3 of the row */
-  max-width: calc(33.333% - 20px);
+  flex: 1 1 calc(25% - 20px); /* each takes 1/3 of the row */
+  max-width: calc(25% - 20px);
 }
 
 /* On mobile: stack all cards */
