@@ -1906,15 +1906,15 @@ input, select, textarea {
 			}
 .nav-row {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* keep stacking on mobile */
-  justify-content: space-between; /* spread cards evenly */
+  gap: 20px;          /* space between the nav cards */
+  flex-wrap: wrap;    /* allows stacking on small screens */
 }
 
 .nav-card {
-  flex: 1 1 30%;   /* each card takes ~1/3 of the row on wide screens */
-  min-width: 250px;
+  flex: 1;            /* makes each card share space */
+  min-width: 280px;   /* prevents them from shrinking too small */
 }
+
 
 
 				#navPanel .link {
@@ -2065,6 +2065,31 @@ input, select, textarea {
   width: 0 !important;
   opacity: 0 !important;
   pointer-events: none;
+}
+
+/* Two-column footer layout: left = stacked cards, right = contact form */
+.nav-row {
+  display: grid;
+  grid-template-columns: 1fr 380px; /* left column fluid, right fixed width */
+  gap: 20px;
+  align-items: start;
+}
+
+/* Make the Contact Us card occupy the right column */
+.nav-row .contact-card {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* spans the height of both left cards */
+}
+
+/* Responsive: stack everything on small screens */
+@media (max-width: 900px) {
+  .nav-row {
+    grid-template-columns: 1fr; /* single column */
+  }
+  .nav-row .contact-card {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 
 
