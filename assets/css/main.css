@@ -2057,7 +2057,37 @@ input, select, textarea {
 
 .nav-card button:hover { background-color: #ce1a00; }
 
-/* Honeypot (hide) */
+/* Layout for the two link cards */
+.nav-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;           /* stack on small screens */
+  align-items: flex-start;
+}
+
+/* Each link card takes half width on desktop */
+.nav-row .nav-card {
+  flex: 1 1 420px;           /* grow, shrink, base width ~420px */
+  min-width: 280px;
+}
+
+/* Contact Us card as a standalone block above */
+.contact-card {
+  margin-bottom: 20px;
+  /* Optional: control max width or center it:
+  max-width: 900px;
+  */
+}
+
+/* Make Contact Us fields fill the card width */
+.contact-card form input,
+.contact-card form textarea,
+.contact-card form button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hide honeypot field */
 .hp {
   position: absolute !important;
   left: -9999px !important;
@@ -2067,42 +2097,11 @@ input, select, textarea {
   pointer-events: none;
 }
 
-/* Two-column footer layout: left = stacked cards, right = contact form */
-.nav-row {
-  display: grid;
-  grid-template-columns: 1fr 380px; /* left column fluid, right fixed width */
-  gap: 20px;
-  align-items: start;
-}
-
-/* Make the Contact Us card occupy the right column */
-.nav-row .contact-card {
-  grid-column: 2;
-  grid-row: 1 / span 2; /* spans the height of both left cards */
-}
-
-/* Responsive: stack everything on small screens */
+/* Responsive: on small screens, everything is stacked naturally */
 @media (max-width: 900px) {
-  .nav-row {
-    grid-template-columns: 1fr; /* single column */
-  }
-  .nav-row .contact-card {
-    grid-column: 1;
-    grid-row: auto;
-  }
-}
-/* Make Contact Us card wider */
-.nav-row .contact-card {
-  flex: 1 1 500px;   /* allow it to grow wider (adjust px as needed) */
-  max-width: 600px;  /* cap so it doesn’t stretch too far */
+  .nav-row { flex-direction: column; }
+  .nav-row .nav-card { flex: 1 1 auto; }
 }
 
-/* Make inputs & textarea stretch full width inside the card */
-.contact-card form input,
-.contact-card form textarea,
-.contact-card form button {
-  width: 100%;
-  box-sizing: border-box; /* ensures padding doesn't break width */
-}
 
 
