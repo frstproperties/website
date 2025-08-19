@@ -2103,5 +2103,26 @@ input, select, textarea {
   .nav-row .nav-card { flex: 1 1 auto; }
 }
 
+/* Two-card row: side-by-side on desktop, stacked on mobile */
+.nav-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;              /* allows stacking on small screens */
+  align-items: flex-start;
+}
+
+.nav-row .nav-card {
+  flex: 0 0 calc(50% - 10px);   /* two columns (account for 20px gap) */
+  max-width: calc(50% - 10px);
+}
+
+/* Mobile: stack the cards */
+@media (max-width: 736px) {
+  .nav-row .nav-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 
 
