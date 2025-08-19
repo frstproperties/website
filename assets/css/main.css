@@ -2036,23 +2036,33 @@ input, select, textarea {
 .nav-card textarea {
   width: 100%;
   padding: 8px;
-  font-size: 0.9em;
+  font-size: 0.95em;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  background: #fff;
 }
 
 .nav-card button {
   background-color: #ed391b;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 10px;
+  padding: 10px 12px;
   font-size: 1em;
   cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.3s;
+  border-radius: 8px;
+  transition: background 0.2s ease;
 }
 
-.nav-card button:hover {
-  background-color: #ce1a00;
+.nav-card button:hover { background-color: #ce1a00; }
+
+/* Honeypot (hide) */
+.hp {
+  position: absolute !important;
+  left: -9999px !important;
+  height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none;
 }
+
 
