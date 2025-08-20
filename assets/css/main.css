@@ -1913,6 +1913,22 @@ input, select, textarea {
   display: flex;
   gap: 20px;          /* space between the nav cards */
   flex-wrap: wrap;    /* allows stacking on small screens */
+	@media (max-width: 736px) {
+  /* Center align the nav cards in the row */
+  .nav-row {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;     /* Center the items vertically */
+    gap: 20px;               /* Maintain gap between items */
+    flex-wrap: wrap;         /* Allow wrapping on smaller screens */
+  }
+
+  .nav-row .nav-card {
+    max-width: 100%;         /* Full width on mobile */
+    flex: 1 1 100%;          /* Take full width */
+  }
+}
+
 }
 
 .nav-card {
